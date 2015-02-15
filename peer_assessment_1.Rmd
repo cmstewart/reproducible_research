@@ -79,7 +79,7 @@ The fourth and final analysis asks us to use the "weekdays" function to make a p
 To do so, we first use the "weekdays" function to determine whether dates are weekdays or weekend days. We then group days using the "revalue" function, transform that vector into class "factor" and, finally, aggregate mean step values over intervals and weekdays vs. weekend days. 
 
 
-``` {r}
+``` {r, exploratory data analysis: 4, echo=TRUE}
 wkdays <-weekdays(df.new$data.date)
 df.new$wkdays <- revalue(wkdays, c(Monday = "Weekday", Tuesday = "Weekday", Wednesday = "Weekday", Thursday = "Weekday", Friday = "Weekday", Saturday = "Weekend", Sunday = "Weekend"))
 df.new$wkdays <-as.factor(df.new$wkdays)
